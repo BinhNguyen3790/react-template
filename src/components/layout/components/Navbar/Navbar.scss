@@ -1,0 +1,63 @@
+@keyframes widthLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fontWeight {
+  from {
+    font-weight: 400;
+  }
+  to {
+    font-weight: 500;
+  }
+}
+.boxNavbar {
+  position: relative;
+  .navbar-link {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  .navbar {
+    // display: none;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    &.navbar-show {
+      display: flex;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 0.25rem 0.5rem;
+      position: relative;
+      font-weight: 400;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: #333333;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:hover {
+        font-weight: 500;
+        animation-name: fontWeight;
+        animation-duration: 0s;
+        &::before {
+          animation-name: widthLine;
+          animation-duration: 0.5s;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
