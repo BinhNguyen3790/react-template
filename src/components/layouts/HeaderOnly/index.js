@@ -1,4 +1,4 @@
-import Navbar from '~/components/layout/components/Navbar';
+import Navbar from '~/components/layouts/components/Navbar';
 
 function HeaderOnly({ children }) {
   return (

@@ -1,5 +1,5 @@
-import Navbar from '~/components/layout/components/Navbar';
-import Sidebar from '~/components/layout/components/Sidebar';
+import Navbar from '~/components/layouts/components/Navbar';
+import Sidebar from '~/components/layouts/components/Sidebar';
 
 function DefaultLayout({ children }) {
   return (
